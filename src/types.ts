@@ -6,7 +6,26 @@ export type FilterClauseType = {
 	value: number | string;
 }
 
-// each of these filters should be applied like an AND in a "where" clause
-// in SQL
-// export type ResponseFiltersType = ResponseFilter[];
+
+type FormQuestions = {
+	id: string,
+	name: string,
+	type?: "ShortAnswer" | "DatePicker",
+	value: string
+}
+
+export type QuestionReponses = {
+	questions: FormQuestions[],
+	submissionId: string,
+	submissionTime: string
+}
+
+export type FormResponse = {
+	responses: QuestionReponses[],
+	totalResponses: number,
+	pageCount: number
+}
+
+
+
 

@@ -12,8 +12,8 @@ const app = express()
 
 app.use(express.json())
 
-app.get('/api', formController.getResponses, (req, res,) => {
-	return res.status(200).json(res.locals.hey)
+app.get(`/api/:formId/filteredresponses`, formController.getResponses, (req, res,) => {
+	return res.status(200).json(res.locals.responses)
 })
 
 app.use('/', (err: ServerError, req: Request, res: Response, next: NextFunction) => {
