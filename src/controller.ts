@@ -53,10 +53,7 @@ const controller: FormControllerType = {
 			const data: AxiosResponse = await axios.request(config)
 			const unfilteredResponses: FormResponse[] = data.data.responses
 
-			// console.log("unfilteredResponses: ", unfilteredResponses)
 			const filteredResponses: Array<QuestionReponses> = filterResponses(unfilteredResponses, filterClause)
-
-			console.log(filteredResponses)
 
 			res.locals.responses = filteredResponses
 			return next()
