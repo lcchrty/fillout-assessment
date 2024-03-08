@@ -1,5 +1,5 @@
 import express, { Request, Response, NextFunction } from 'express'
-import formController from "./controller.ts"
+import formController from "./controller"
 
 type ServerError = {
 	log: string,

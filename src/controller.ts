@@ -5,7 +5,7 @@ interface FormControllerType {
 }
 
 
-export const controller: FormControllerType = {
+const controller: FormControllerType = {
 
 	getResponses: () => {
 
@@ -14,3 +14,4 @@ export const controller: FormControllerType = {
 
 }
 
+export default controller

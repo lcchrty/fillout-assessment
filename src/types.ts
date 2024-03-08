@@ -8,5 +8,5 @@ export type FilterClauseType = {
 
 // each of these filters should be applied like an AND in a "where" clause
 // in SQL
-export type ResponseFiltersType = ResponseFilter[];
+// export type ResponseFiltersType = ResponseFilter[];
 
