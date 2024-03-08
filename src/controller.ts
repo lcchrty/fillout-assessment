@@ -7,8 +7,9 @@ interface FormControllerType {
 
 const controller: FormControllerType = {
 
-	getResponses: () => {
-
+	getResponses: (req: Request, res: Response, next: NextFunction) => {
+		res.locals.hey = "Hey, Chip"
+		return next()
 	}
 
 
